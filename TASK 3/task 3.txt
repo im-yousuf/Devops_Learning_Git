@@ -1,0 +1,48 @@
+Dell@YUTA MINGW64 /d/student-portfolio (main)
+$ git branch
+  feature/add-bio
+* main
+
+Dell@YUTA MINGW64 /d/student-portfolio (main)
+$ git remote add origin https://github.com/im-yousuf/student-portfolio.git
+git branch -M main
+git push -u origin main
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (15/15), 1.55 KiB | 1.55 MiB/s, done.
+Total 15 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), done.
+To https://github.com/im-yousuf/student-portfolio.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Dell@YUTA MINGW64 /d/student-portfolio (main)
+$ git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.04 KiB | 76.00 KiB/s, done.
+From https://github.com/im-yousuf/student-portfolio
+ * branch            main       -> FETCH_HEAD
+   fa42a8d..09d41c1  main       -> origin/main
+Updating fa42a8d..09d41c1
+Fast-forward
+ README.md | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+Dell@YUTA MINGW64 /d/student-portfolio (main)
+$ git log --oneline --graph --all
+* 09d41c1 (HEAD -> main, origin/main) Add skills section to README
+*   fa42a8d merge: resolve README conflict
+|\
+| * 0163e9f (feature/add-bio) feat: add about me section
+* | 064bf7d docs: update portfolio introduction
+|/
+* 5a38edc chore: add gitignore rules
+* 9e14627 feat: initial commit with README
+
+Dell@YUTA MINGW64 /d/student-portfolio (main)
+$

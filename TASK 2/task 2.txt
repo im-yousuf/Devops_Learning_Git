@@ -1,0 +1,75 @@
+
+Dell@YUTA MINGW64 /d/student-portfolio (master)
+$ git branch -M main
+
+Dell@YUTA MINGW64 /d/student-portfolio (main)
+$ git switch -c feature/add-bio
+Switched to a new branch 'feature/add-bio'
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/add-bio)
+$ git branch
+* feature/add-bio
+  main
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/add-bio)
+$ notepad README.md
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/add-bio)
+$ git add README.md
+git commit -m "feat: add about me section"
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+[feature/add-bio 0163e9f] feat: add about me section
+ 1 file changed, 8 insertions(+)
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/add-bio)
+$ git switch main
+Switched to branch 'main'
+
+Dell@YUTA MINGW64 /d/student-portfolio (main)
+$ notepad README.md
+
+Dell@YUTA MINGW64 /d/student-portfolio (main)
+$ git add README.md
+git commit -m "docs: update portfolio introduction"
+[main 064bf7d] docs: update portfolio introduction
+ 1 file changed, 8 insertions(+)
+
+Dell@YUTA MINGW64 /d/student-portfolio (main)
+$ git merge feature/add-bio
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+Dell@YUTA MINGW64 /d/student-portfolio (main|MERGING)
+$ notepad README.md
+git add README.md
+
+Dell@YUTA MINGW64 /d/student-portfolio (main|MERGING)
+$ git add README.md
+
+Dell@YUTA MINGW64 /d/student-portfolio (main|MERGING)
+$ git status
+On branch main
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   README.md
+
+
+Dell@YUTA MINGW64 /d/student-portfolio (main|MERGING)
+$ git commit -m "merge: resolve README conflict"
+[main fa42a8d] merge: resolve README conflict
+
+Dell@YUTA MINGW64 /d/student-portfolio (main)
+$ git log --graph --oneline --all
+*   fa42a8d (HEAD -> main) merge: resolve README conflict
+|\
+| * 0163e9f (feature/add-bio) feat: add about me section
+* | 064bf7d docs: update portfolio introduction
+|/
+* 5a38edc chore: add gitignore rules
+* 9e14627 feat: initial commit with README
+
+Dell@YUTA MINGW64 /d/student-portfolio (main)
+$

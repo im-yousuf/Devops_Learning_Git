@@ -1,0 +1,120 @@
+
+Dell@YUTA MINGW64 ~ (main)
+$ cd d:
+
+Dell@YUTA MINGW64 /d
+$ cd student-portfolio
+
+Dell@YUTA MINGW64 /d/student-portfolio (main)
+$ git switch main
+git pull origin main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+From https://github.com/im-yousuf/student-portfolio
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+Dell@YUTA MINGW64 /d/student-portfolio (main)
+$ git switch -c feature/skills-list
+Switched to a new branch 'feature/skills-list'
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/skills-list)
+$ git branch
+  feature/add-bio
+* feature/skills-list
+  main
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/skills-list)
+$ notepad SKILLS.md
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/skills-list)
+$ git status
+On branch feature/skills-list
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        SKILLS.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/skills-list)
+$ git add SKILLS.md
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/skills-list)
+$ git status
+On branch feature/skills-list
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   SKILLS.md
+
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/skills-list)
+$ git commit -m "feat: add technical skills list"
+[feature/skills-list 1b2c74d] feat: add technical skills list
+ 1 file changed, 14 insertions(+)
+ create mode 100644 SKILLS.md
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/skills-list)
+$ git log --oneline --graph --all
+* 1b2c74d (HEAD -> feature/skills-list) feat: add technical skills list
+* 09d41c1 (origin/main, main) Add skills section to README
+*   fa42a8d merge: resolve README conflict
+|\
+| * 0163e9f (feature/add-bio) feat: add about me section
+* | 064bf7d docs: update portfolio introduction
+|/
+* 5a38edc chore: add gitignore rules
+* 9e14627 feat: initial commit with README
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/skills-list)
+$ git push -u origin feature/skills-list
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 402 bytes | 402.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'feature/skills-list' on GitHub by visiting:
+remote:      https://github.com/im-yousuf/student-portfolio/pull/new/feature/skills-list
+remote:
+To https://github.com/im-yousuf/student-portfolio.git
+ * [new branch]      feature/skills-list -> feature/skills-list
+branch 'feature/skills-list' set up to track 'origin/feature/skills-list'.
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/skills-list)
+$ notepad SKILLS.md
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/skills-list)
+$ git status
+On branch feature/skills-list
+Your branch is up to date with 'origin/feature/skills-list'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SKILLS.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/skills-list)
+$ git add SKILLS.md
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/skills-list)
+$ git commit -m "fix: address review feedback"
+[feature/skills-list b1afeb9] fix: address review feedback
+ 1 file changed, 8 insertions(+)
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/skills-list)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 370 bytes | 370.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/im-yousuf/student-portfolio.git
+   1b2c74d..b1afeb9  feature/skills-list -> feature/skills-list
+
+Dell@YUTA MINGW64 /d/student-portfolio (feature/skills-list)
+$
